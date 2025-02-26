@@ -1,9 +1,10 @@
+// javascript object
 let numberDoubler = {
-    results: [],
-
+    results: [], // array
+    // object method
     double: function(number) {
         let doubled = number * 2;
-        this.results.push(doubled);
+        this.results.push(doubled); // array method
         return doubled;
     },
 
