@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 6.4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Number Doubler</h1>
+    <p>Enter a number and see it doubled!</p>
+
+    <input type="number" id="numberInput" placeholder="Enter a number" />
+    <button id="doubleButton">Double It!</button>
+
+    <div class="result" id="resultDisplay"></div>
+
+    <script src="app.js"></script>
 </body>
 </html>
