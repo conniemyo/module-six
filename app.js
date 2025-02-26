@@ -7,9 +7,8 @@ let numberDoubler = {
         return doubled;
     },
 
-    showResult: function(doubledNumber) {
-        let resultDisplay = document.getElementById("resultDisplay");
-        resultDisplay.textContent = `Doubled Number: ${doubledNumber}`;
+    getResults: function() {
+        return this.results.join(", ");
     }
 };
 
@@ -19,10 +18,8 @@ document.getElementById("doubleButton").addEventListener("click", function() {
 
     if (!isNaN(number)) {
         let doubled = numberDoubler.double(number);
-        numberDoubler.showResult(doubled);
+        document.getElementById("resultDisplay").textContent = "Doubled: " + doubled + " | History: " + numberDoubler.getResults();
     } else {
-        alert("Please enter a valid number.");
+        document.getElementById("resultDisplay").textContent = "Enter a valid number.";
     }
-
-    document.getElementById("numberInput").value = "";
 });
